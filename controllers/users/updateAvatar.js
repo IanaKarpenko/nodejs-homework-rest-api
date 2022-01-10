@@ -19,7 +19,7 @@ const updateAvatar = async(req, res)=> {
 
         res.json({avatarURL});
     } catch (error) {
-        await fs.unlink(tempUpload);
+        await fs.unlink(tempDir);
         throw new Unauthorized("Not authorized");
     }
 };
